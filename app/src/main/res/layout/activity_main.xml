@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#ecffa7">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Shopping List"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#43464f" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/item"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:width="150dp"
+        android:textStyle="bold"
+        android:hint="Enter Item..."
+        android:inputType="textCapSentences"
+        android:autoText="@bool/abc_config_actionMenuItemAllCaps" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:id="@+id/button"
+        android:onClick="buttonOnClick"
+        android:layout_alignBottom="@+id/item"
+        android:layout_alignRight="@+id/listDisplay"
+        android:layout_alignEnd="@+id/listDisplay"
+        android:layout_toEndOf="@+id/item"
+        android:layout_alignTop="@+id/item"
+        android:width="40dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listDisplay"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        tools:listitem="@android:layout/simple_list_item_1"
+        android:layout_below="@+id/item" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/clear"
+        android:layout_above="@+id/listDisplay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/item"
+        android:layout_below="@+id/textView"
+        android:width="60dp"
+        android:layout_toLeftOf="@+id/item" />
+
+</RelativeLayout>
